@@ -25,10 +25,9 @@ public class PolymorphismDemo {
         System.out.println("\nAnimal reference holding Cat object:");
         animal2.makeSound(); 
         Animal[] animals = {new Dog(), new Cat()};
-
         System.out.println("\nDemonstrating polymorphism in an array:");
         for (Animal animal : animals) {
-            animal.makeSound(); // Output: Woof! Woof! and Meow! Meow!
+            animal.makeSound();
         }
     }
 }
