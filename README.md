@@ -1,33 +1,27 @@
-# Avinash-singh
-class Animal {
-    public void makeSound() {
-         System.out.println("Some generic animal sound");
+class Employee {
+ private String name;
+ private double salary;
+    public Employee() {
+        this.name = "Unknown"; // Default name
+        this.salary = 0.0;     // Default salary
+    }
+    public Employee(String name) {
+        this.name = name;
+        this.salary = 30000.0; // Default salary
+    }
+    public void displayEmployeeDetails() {
+        System.out.println("Employee Name: " + this.name);
+        System.out.println("Employee Salary: " + this.salary);
     }
 }
-class Dog extends Animal {
-    public void makeSound() {
-        System.out.println("Woof! Woof!");
-    }
-}
-class Cat extends Animal {
-    public void makeSound() {
-        System.out.println("Meow! Meow!");
-    }
-}
-public class PolymorphismDemo {
+public class EmployeeTest {
     public static void main(String[] args) {
-        Animal animal1 = new Dog();
-        Animal animal2 = new Cat();
-        System.out.println("Animal reference holding Dog object:");
-        animal1.makeSound();
-        System.out.println("\nAnimal reference holding Cat object:");
-        animal2.makeSound(); 
-        Animal[] animals = {new Dog(), new Cat()};
-        System.out.println("\nDemonstrating polymorphism in an array:");
-        for (Animal animal : animals) {
-            animal.makeSound();
-        }
+        Employee emp1 = new Employee();
+        System.out.println("Details of Employee 1:");
+        emp1.displayEmployeeDetails();
+        System.out.println();
+        Employee emp2 = new Employee("Alice");
+        System.out.println("Details of Employee 2:");
+        emp2.displayEmployeeDetails();
     }
 }
-
- 
